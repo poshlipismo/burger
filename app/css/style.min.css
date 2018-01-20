@@ -280,7 +280,7 @@ ul {
   min-width: 6.125rem;
   padding: 0.625rem 1.0625rem;
   border-radius: 5px;
-  background-color: #e25028;
+  background-color: #f9b43b;
   color: #fff;
   text-decoration: none;
   font-size: 0.8125rem;
@@ -291,7 +291,7 @@ ul {
 }
 
 .order--link:hover {
-  background-color: #cb411b;
+  background-color: #f8a718;
 }
 
 .best {
@@ -404,7 +404,7 @@ ul {
   min-width: 6.125rem;
   padding: 0.625rem 1.0625rem;
   border-radius: 5px;
-  background-color: #e25028;
+  background-color: #f9b43b;
   color: #fff;
   text-decoration: none;
   font-size: 0.8125rem;
@@ -427,6 +427,6 @@ ul {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%, #f9b43b 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$firstColor', endColorstr='startColor',GradientType=0 );
   /* IE6-9 */
 }
