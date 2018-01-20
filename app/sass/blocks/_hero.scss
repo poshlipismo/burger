@@ -1,0 +1,57 @@
+.hero {
+    background-image: url('../images/bg/hero_bg.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+}
+
+.hero--texture {
+  background-image: url('../images/bg/texture.png');
+  height: 100%;
+}
+
+.hero--container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero--content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
+    padding-bottom: 15%;
+  }
+  
+  .hero--img, .hero--description {
+    flex-basis: 50%;
+    display: flex;
+  }
+  
+  .hero--description {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .section--title {
+    color: $heroTitleText;
+    font-family: 'Gagalin regular';
+    font-size: 72px;
+    font-weight: 300;
+    line-height: 1.42;
+    margin: 0;
+    padding-top: 60px;
+  }
+  
+  .hero--description-text {
+    color: $heroDescriptionText;
+    font-family: 'Lifehack medium';
+    font-size: rem(65px);
+    font-weight: 400;
+    line-height: 1;
+  }

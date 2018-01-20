@@ -1,0 +1,63 @@
+.rewiews {
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center;
+}
+
+.rewiews--container {
+    width: 1110px;
+}
+
+.rewiews--list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rewiews--img {
+    filter: grayscale(100%);
+}
+
+.rewiews--group {
+    margin: 0 auto;
+    width: 230px;
+}
+
+.rewiews--name {
+    padding-top: 50px;
+    font-family: "Gagalin regular";
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $rewiewsName;
+}
+
+.rewiews--message {
+    padding-top: 30px;
+    font-family: "Ubuntu light";
+    font-size: 14px;
+    color: $rewiewsMessage;
+}
+
+.rewiews--btn {
+    padding-top: 20px;
+}
+
+.rewiews--link {
+    font-family: "Ubuntu medium";
+    min-width: rem(98px);
+    padding: rem(10px) rem(17px);
+    border-radius: 5px;
+    background-color: $orange;
+    color: $orderLink;
+    text-decoration: none;
+    font-size: rem(13px);
+    font-weight: 500;
+    line-height: 1.42;
+    text-transform: uppercase;
+    transition: .5s;
+    color: $rewiewsBtnText;
+        
+    &:hover {
+        background-color: darken($rewiewsBtn, 7%);
+    }
+}

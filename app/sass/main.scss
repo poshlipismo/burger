@@ -1,0 +1,29 @@
+// Константы
+
+@import "./config/variables";
+@import "./config/mixins";
+
+// Шрифты
+
+@import "./fonts/fonts";
+
+// Спрайты
+
+@import "./sprites/clients";
+
+// Разметка и базовые настройки
+
+@import "./layout/base";
+@import "./layout/wrapper";
+@import "./layout/header";
+@import "./layout/nav-section";
+
+// Блоки
+@import "./blocks/hero";
+@import "./blocks/header-logo";
+@import "./blocks/navigation";
+@import "./blocks/order";
+
+@import "./blocks/best";
+@import "./blocks/features";
+@import "./blocks/rewiews";

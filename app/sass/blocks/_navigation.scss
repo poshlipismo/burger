@@ -1,0 +1,39 @@
+.navigation {
+    margin-right: rem(15px);
+    &--list {
+      margin: 0;
+      padding: 0;
+    }
+  }
+  
+  .navigation--item {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    &:after {
+      display: inline-block;
+      vertical-align: middle;
+      content: ' ';
+      @include circle(5px, $textWhite);
+      margin: 0 12px;
+    }
+    &:last-child:after {
+      display: none;
+    }
+  }
+  
+  .navigation--link {
+    color: $textWhite;
+    font-family: "Ubuntu medium";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.42;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    transition: .5s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
