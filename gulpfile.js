@@ -8,8 +8,21 @@ var gulp    	 	= require('gulp'),
     imagemin	 	= require('gulp-imagemin'),
     pngquant	 	= require('imagemin-pngquant'),
     cache	 		= require('gulp-cache'),
-    autoprefixer 	= require('gulp-autoprefixer'),
+	autoprefixer 	= require('gulp-autoprefixer'),
+	font2css		= require('gulp-font2css').default,
     browserSync  	= require('browser-sync');
+
+/* 
+* Файлы шрифтов, для использования font2css:
+* <family>[-<weight>][-<style>].<extension>
+*/
+
+gulp.task('font2css', function() {
+	return gulp.src('app/fonts/**/*.{otf,ttf,woff,woff2}')
+		.pipe(font2css())
+		.pipe(concat('_gulp_fonts.scss'))
+		.pipe(gulp.dest('app/sass/fonts'));
+});	
 
 gulp.task('build-css', function() {
 	return gulp.src(['app/sass/**/*.+(scss|sass)'])
@@ -17,7 +30,7 @@ gulp.task('build-css', function() {
 			outputStyle: 'expanded'
 		}).on('error', sass.logError))
 		.pipe(concat('style.min.css'))
-		/* .pipe(cssnano()) */
+		.pipe(cssnano())
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({
 			stream: true
