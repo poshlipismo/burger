@@ -10,6 +10,7 @@ var gulp    	 	= require('gulp'),
     cache	 		= require('gulp-cache'),
 	autoprefixer 	= require('gulp-autoprefixer'),
 	font2css		= require('gulp-font2css').default,
+	htmlhint		= require('gulp-htmlhint'),
     browserSync  	= require('browser-sync');
 
 /* 
@@ -85,6 +86,36 @@ gulp.task('watch', ['browser-sync', 'css-libs', 'scripts'], function() {
 	gulp.watch('app/sass/**/*.+(scss|sass)', ['build-css']);
 	gulp.watch('app/*.html', browserSync.reload);
 	gulp.watch('app/js/**/*.js', browserSync.reload);
+});
+
+gulp.task('htmlhint', function() {
+	return gulp.src('app/index.html')
+		.pipe(htmlhint({
+			"tagname-lowercase": true,
+			"attr-lowercase": true,
+			"attr-value-double-quotes": true,
+			"attr-value-not-empty": false,
+			"attr-no-duplication": true,
+			"doctype-first": true,
+			"tag-pair": true,
+			"tag-self-close": false,
+			"spec-char-escape": true,
+			"id-unique": true,
+			"src-not-empty": true,
+			"title-require": true,
+			"alt-require": true,
+			"doctype-html5": true,
+			"id-class-value": "dash",
+			"style-disabled": false,
+			"inline-style-disabled": false,
+			"inline-script-disabled": false,
+			"space-tab-mixed-disabled": "space",
+			"id-class-ad-disabled": false,
+			"href-abs-or-rel": false,
+			"attr-unsafe-chars": true,
+			"head-script-disabled": true
+		  }))
+		.pipe(gulp.dest('dist'));
 });
 
 gulp.task('build', ['clean', 'img', 'build-css', 'scripts'], function() {
