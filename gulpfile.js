@@ -31,7 +31,7 @@ gulp.task('build-css', function() {
 			outputStyle: 'expanded'
 		}).on('error', sass.logError))
 		.pipe(concat('style.min.css'))
-		.pipe(cssnano())
+		// .pipe(cssnano())
 		.pipe(gulp.dest('app/css'))
 		.pipe(browserSync.reload({
 			stream: true
@@ -47,7 +47,7 @@ gulp.task('scripts', function() {
 
 gulp.task('css-libs', ['build-css'], function() {
 	return gulp.src('app/css/libs.css')
-		.pipe(cssnano())
+		//.pipe(cssnano())
 		.pipe(rename({
 			suffix: '.min'
 		}))
