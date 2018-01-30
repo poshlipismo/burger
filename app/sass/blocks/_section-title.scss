@@ -1,0 +1,9 @@
+.section--title {
+    color: $white;
+    @include gagalin();
+    font-size: rem(72px);
+    
+    line-height: 1.42;
+    margin: 0;
+    padding-top: rem(60px);
+}

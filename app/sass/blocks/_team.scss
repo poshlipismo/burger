@@ -1,0 +1,196 @@
+.team {
+    background: url("../images/bg/team.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+
+.team--title {
+    margin-bottom: 12%;
+}
+
+.team--content {
+    text-align: center;
+}
+
+.team--section {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    background: rgba(#2f3234, .93);
+    padding: 5% 2% 0 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include tablets {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/*
+.team--container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    background: rgba(#2f3234, .93);
+    padding-left: rem(70px);
+    display: flex;
+    flex-direction: column;
+    padding-top: rem(50px);
+}
+*/
+
+.team--accordion-item {
+    margin-bottom: rem(40px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &.active {
+        .team-accordion--trigger {
+            color: $yellow;
+
+            &:before {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}
+
+/*
+.team--accordion-item-active {
+    .team--accordion-trigger {
+        color: $yellow;
+  
+        &:before {
+            transform: rotate(-180deg);
+        }
+    }
+  
+    .team--accordion-content {
+        display: flex;
+        flex-direction: row;
+    }
+}
+*/
+
+.team-accordion--trigger {
+    @include gagalin();
+    font-size: rem(14px);
+    color: $white;
+    text-decoration: none;
+    
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: rem(20px);
+
+    position: relative;
+  
+    @include tablets() {
+        font-size: rem(25px);
+    }
+
+    &:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: rem(-18px);
+		top: rem(8px);
+		width: 0;
+        height: 0;
+    }
+    
+    &:before {
+		border-top: rem(7px) solid $yellow;
+		border-left: rem(5px) solid transparent;
+		border-right: rem(5px) solid transparent;
+		border-bottom: rem(0px) solid transparent;
+		transform: rotate(0deg);
+		transition: .3s;
+	}
+
+	&:after {
+		display: none;
+		border-bottom: rem(7px) solid $yellow;
+		border-left: rem(5px) solid transparent;
+		border-right: rem(5px) solid transparent;
+		border-top: rem(0px) solid transparent;
+    }
+       
+    /*
+    &:before {
+      content: "";
+      height: 0;
+      width: 0;
+      border: rem(9px) solid transparent;
+      border-top-color: $yellow;
+      border-bottom-width: 0px;  
+    }
+    */
+}
+
+.team-accordion--content {
+    padding-top: rem(14px);
+    display: none;
+}
+
+.team-accordion--pic {
+    text-align: center;
+    width: 30%;
+}
+
+.team-accordion--img {
+    width: rem(100px);
+    height: rem(100px);
+
+    @include cover;
+    border-radius: 50%;
+}
+
+/*
+.team-accordion--pic {
+    @include circle(rem(100px), #fff);
+    text-align: center;
+}
+
+.team--accordion-pic-img {
+    height: 100%;
+}
+*/
+  
+.team-accordion--text {
+    width: 70%;
+    /*
+    padding-left: rem(20px);
+    max-width: rem(260px);
+    color: #fff;
+    */
+}
+
+.team-accordion--title {
+    @include ubuntu(bold);
+    font-size: rem(14px);
+    color: $white;
+    margin-bottom: rem(14px);
+}
+
+.team-accordion--text-content {
+    @include ubuntu(light);
+    color: $white;
+    font-size: rem(14px);
+}
+
+/*
+.team--accordion-content {
+    padding-bottom: rem(40px);
+    font-family: "Ubuntu light";
+    display: none;
+}
+*/

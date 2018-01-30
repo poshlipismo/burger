@@ -1,7 +1,19 @@
 .header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 10px;
+
+    padding-top: rem(12px);
+    //  width: 100%;
+}
+
+.header--menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.header--links {
+    display: flex;
+    align-items: center;
 }

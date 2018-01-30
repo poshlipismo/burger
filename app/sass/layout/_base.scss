@@ -1,61 +1,80 @@
-*, *::before, *::after { 
-    box-sizing: border-box; 
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: 'Ubuntu regular', Arial, Helvetica, sans-serif;
+html {
+    @include tablets {
+      font-size: rem(15px);
+    }
+  
+    @include phones {
+      font-size: rem(13px);
+    }
+  }
+  
+  html,
+  body {
+    height: 100%;
+  }
+  
+  body {
+    font-size: rem(16px);
     line-height: 1.42;
-    color: $dark;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-body, html {
-    height: 100%;
-}
+    position: relative;
+    @include ubuntu();
+    color: $dark;
+  }
   
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-  
-.visuallyhidden {
-    position: absolute;
-  
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-  
-    white-space: nowrap;
-  
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-.main--container {
-    height: 100%;
-    min-height: 650px;
-}
-
-.container {
-    width: 960px;
+  .container {
     margin: 0 auto;
+    position: relative;
+    width: 95%;
+    max-width: 940px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.section {
-    height: 100%;
-    background-color: rgba(0, 0, 0, .31);
-    min-height: 940px;
-    min-width: 650px;
-}
+  }
+  
+  .wrapper {
+    position: relative;
+    width: 100%;
+    // min-width: 940px + 20px;
+    min-height: 100%;
+    overflow: hidden;
+  }
+  
+  
+  // tag styles reset
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    font-weight: normal;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  ul {
+    padding: 0;
+    margin: 0;
+    li {
+      list-style: none;
+    }
+  }
+  
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer {
+    position: relative;
+    width: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  

@@ -5,3 +5,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@mixin lifehack() {
+	font-family: 'Lifehack medium';
+}

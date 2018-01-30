@@ -1,16 +1,26 @@
 .best {
     background-image: url('../images/bg/best_bg.png');
     background-repeat: no-repeat;
-    background-position: 50%;
     background-size: cover;
-    position: relative;
+    background-position: center center;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    // position: relative;
 }
 
 .best--title {
-    padding-top: 110px;
-    padding-bottom: 38px;
+    color: $dark;
+    margin-bottom: rem(80px);
+
+    /*
+    padding-top: rem(110px);
+    padding-bottom: rem(38px);
     font-family: "Gagalin regular";
-    font-size: 72px;
+    font-size: rem(72px);
     text-align: center;
     text-transform: uppercase;
+    */
 }

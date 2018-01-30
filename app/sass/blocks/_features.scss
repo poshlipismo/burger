@@ -1,43 +1,70 @@
-.features {
-    margin: 0 auto;
-    width: 960px;
-}
-
 .features--list {
     display: flex;
-    flex-direction: row;
+    
+    @include phones {
+        flex-direction: column;
+    }
+    /* flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    */
 }
 
 .features--item {
-    width: 300px;
+    margin-bottom: rem(50px);
+    padding: 0 rem(15px);
+
+    display: flex;
+    flex-direction: column;
+
+    @include phones {
+        flex-direction: row;
+    }
+    /* width: rem(300px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    */
 }
 
+/*
 .features--box {
     display: flex;
-    width: 100px;
+    width: rem(100px);
+}
+*/
+
+/*.features--img {
+    margin: 0;
+}
+*/
+
+.features--icon-pic {
+    width: 95%;
+    height: rem(100px); 
 }
 
-.features--img {
-    margin: 0;
+.features--desc {
+    text-align: center;
 }
 
 .features--title {
+    font-size: rem(24px);
+    @include lifehack();
+    color: $dark;
+    margin-bottom: rem(20px);
+
     text-align: center;
-    font-family: "Lifehack medium";
-    font-size: 24px;
-    color: $featuresTitle;
-    padding-top: 30px;
+
+    // text-align: center;
+    // color: $featuresTitle;
+    // padding-top: rem(30px);
 }
 
-.features--description {
-    font-family: "Ubuntu light";
-    font-size: 14px;
+.features--text p {
+    @include ubuntu(light);
+    font-size: rem(14px);
     text-align: center;
     color: $featuresDescription;
-    padding-top: 20px;
+    padding-top: rem(20px);
 }

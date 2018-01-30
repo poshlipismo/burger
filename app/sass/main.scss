@@ -14,19 +14,25 @@
 // Разметка и базовые настройки
 
 @import "./layout/base";
-@import "./layout/wrapper";
 @import "./layout/header";
 @import "./layout/nav-section";
 
 // Блоки
+@import "./blocks/btn";
+@import "./blocks/section-title";
+
 @import "./blocks/hero";
+@import "./blocks/header-menu";
 @import "./blocks/header-logo";
 @import "./blocks/navigation";
 @import "./blocks/order";
+@import "./blocks/hamburger-menu-link";
 @import "./blocks/arrow";
 
 @import "./blocks/best";
 @import "./blocks/features";
-@import "./blocks/rewiews";
+@import "./blocks/team";
+@import "./blocks/menu";
+@import "./blocks/reviews";
 
 @import "./blocks/burgers";

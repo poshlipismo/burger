@@ -1,11 +1,35 @@
 @mixin circle($width, $color) {
-    width: $width;
-    height: $width;
-    border-radius: $width/2;
-    background-color: $color;
-  }
+  width: $width;
+  height: $width;
+  border-radius: $width/2;
+  background-color: $color;
+}
   
   //responsive
-  @function rem($px) {
-    @return $px / 16px+0rem;
+@function rem($px) {
+  @return $px / 16px+0rem;
+}
+
+@mixin cover(){
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+@mixin desktops {
+  @media screen and (max-width: $desktop) {
+    @content;
   }
+}
+
+@mixin tablets {
+  @media screen and (max-width: $tablets) {
+    @content;
+  }
+}
+  
+@mixin phones {
+  @media screen and (max-width: $phones) {
+    @content;
+  }
+}

@@ -1,0 +1,51 @@
+.menu {
+    background: url("../images/bg/menu.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative; 
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section--title-white {
+    color: $white;
+}
+
+.menu--accordion {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: 100%;
+}
+
+.menu--accordion-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.menu--accordion-title {
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+
+    font-family: "Gagalin regular";
+    font-size: rem(40px);
+    color: $white;
+}
+
+.menu--accordion-title-active {
+    color: $yellow;
+}
+
+.menu--accordion-content {
+    width: 0px;
+    overflow: hidden;
+}
+
+.menu--accordion-content-active {
+    width: rem(540px);
+}
